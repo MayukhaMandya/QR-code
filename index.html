@@ -5,55 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mayukha – Quick Links</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="./favicon.png" type="image/png">
 
 <style>
+    /* === GENERAL RESET === */
     body {
         margin: 0;
         font-family: 'Poppins', sans-serif;
-        background: url('./city.png') no-repeat center/cover; /* Use your same BG image */
+        background: url('./city.png') no-repeat center/cover;
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+    /* === CONTAINER === */
     .container {
-        background: rgba(255,255,255,0.75);
+        background: rgba(255, 255, 255, 0.75);
         backdrop-filter: blur(5px);
-        padding: 25px;
+        padding: 30px 25px;
         border-radius: 20px;
         text-align: center;
         width: 90%;
         max-width: 400px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
     }
+
+    .container:hover {
+        transform: translateY(-3px);
+    }
+
+    /* === TEXT STYLING === */
     h2 {
         color: #D5564D;
-        font-size: 1.6rem;
-        margin-bottom: 8px;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
     }
+
     p {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
         color: #555;
     }
+
+    /* === LINK BUTTONS === */
     .link-btn {
         display: block;
         text-decoration: none;
         padding: 14px;
-        margin: 10px 0;
+        margin: 12px 0;
         border-radius: 50px;
         font-weight: 600;
-        transition: transform 0.15s ease;
-    }
-    .link-btn:hover {
-        transform: scale(1.05);
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    /* Button colors matching your theme */
+    .link-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* === THEME COLORS === */
     .orange { background: #EE7C60; color: #fff; }
     .blue { background: #8DB5D5; color: #fff; }
     .green { background: #8FBF91; color: #fff; }
     .purple { background: #BCA7E9; color: #fff; }
     .pink { background: #EBA7A5; color: #fff; }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 400px) {
+        h2 { font-size: 1.5rem; }
+        p { font-size: 0.85rem; }
+        .link-btn { padding: 12px; font-size: 0.9rem; }
+    }
 </style>
 
 </head>
@@ -63,13 +88,11 @@
     <h2>Quick Links</h2>
     <p>Scan & reach anything instantly</p>
 
-<a href="https://mayukhamandya.github.io/" class="link-btn orange">View Portfolio</a>
-<a href="https://www.linkedin.com/in/mayukha-mandya/" class="link-btn blue">LinkedIn</a>
-<a href="./Mayukha_Mandya_Ammangatambu_Resume%20copy.pdf" target="_blank" class="link-btn purple">Resume (PDF)</a>
-
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mandya.mayukha@gmail.com"
-   class="link-btn green" target="_blank" rel="noopener">Contact Me</a>
-
+    <a href="https://mayukhamandya.github.io/" class="link-btn orange" target="_blank">View Portfolio</a>
+    <a href="https://www.linkedin.com/in/mayukha-mandya/" class="link-btn blue" target="_blank">LinkedIn</a>
+    <a href="./Mayukha_Mandya_Ammangatambu_Resume%20copy.pdf" target="_blank" class="link-btn purple">Resume (PDF)</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mandya.mayukha@gmail.com"
+       class="link-btn green" target="_blank" rel="noopener">Contact Me</a>
 </div>
 
 </body>
